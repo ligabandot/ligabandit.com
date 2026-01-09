@@ -1,111 +1,156 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>LIGABANDIT - Situs Resmi Ligabandit</title>
+  <title>LIGABANDIT - Situs Resmi</title>
 
   <!-- SEO -->
-  <meta name="description" content="LIGABANDIT situs resmi #ligabandit. Main bola, slot, live games, dan prediksi terpercaya. Minimal deposit 10rb.">
-  <meta name="keywords" content="ligabandit, situs ligabandit, bola online, slot online, prediksi bola, #ligabandit">
+  <meta name="description" content="LIGABANDIT situs resmi. Main bola, slot, live games terpercaya">
   <meta name="author" content="Ligabandit Official">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="LIGABANDIT - Situs Permainan Bola & Slot Terpercaya">
-  <meta property="og:description" content="Min deposit 10rb. Main bola, slot, live games aman & terpercaya.">
-  <meta property="og:image" content="https://ligabandit.com/favicon-512x512.png">
-  <meta property="og:url" content="https://ligabandit.com">
-  <meta property="og:type" content="website">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: box-border;
+      font-family: 'Poppins', sans-serif;
+    }
+
     body {
+      min-height: 100vh;
       background: linear-gradient(135deg, #3a2f25, #7c674f);
       color: #fff;
-      text-align: center;
-      min-height: 100vh;
-      padding-bottom: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
-    h1 { color: #ffd36b; margin-top: 20px; }
-    h2 { font-size: 18px; margin-bottom: 10px; }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      padding: 28px 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+      text-align: center;
+    }
+
+    .logo {
+      width: 110px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #ffd36b;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
+
     .divider {
-      width: 60%;
+      width: 70%;
       height: 2px;
-      margin: 12px auto;
+      margin: 14px auto;
       background: linear-gradient(to right, transparent, #ffd36b, transparent);
     }
+
+    .info {
+      font-size: 14px;
+      margin-bottom: 18px;
+      color: #ffe6a6;
+    }
+
     .menu {
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 12px;
-      margin-top: 20px;
     }
+
     .menu a {
-      width: 80%;
-      max-width: 300px;
       padding: 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      background: #ffd36b;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ffd36b, #e6b950);
       color: #3a2f25;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
+
+    .menu a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
     .menu a.login {
-      animation: pulse 2.5s infinite;
+      animation: softPulse 3s infinite;
     }
-    @keyframes pulse {
-      0%,100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+
+    @keyframes softPulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(255,211,107,0.0); }
+      50% { box-shadow: 0 0 18px rgba(255,211,107,0.45); }
     }
+
     footer {
-      margin-top: 40px;
-      font-size: 13px;
+      margin-top: 22px;
+      font-size: 12px;
       color: #ffd36b;
+      opacity: 0.85;
     }
   </style>
 </head>
 
 <body>
+  <div class="card">
+    <img src="goat-logo.png" alt="LIGABANDIT Logo" class="logo">
 
-  <img src="goat-logo.png" width="120" alt="LIGABANDIT Logo">
+    <h1>LIGABANDIT</h1>
+    <h2>Situs Resmi Ligabandit</h2>
 
-  <h1>LIGABANDIT</h1>
-  <h2>Situs Resmi Ligabandit</h2>
-  <div class="divider"></div>
-  <strong>Minimal Deposit Rp10.000 & Withdraw Rp50.000</strong>
+    <div class="divider"></div>
 
-  <div class="menu">
-    <a class="login" href="https://ligabandot31808.com/?referralid=anshun168" target="_blank">LOGIN / DAFTAR</a>
-    <a href="https://ligabandot31808.com/blog/?title=PREDIKSI%20BOLA" target="_blank">PREDIKSI BOLA</a>
-    <a href="https://ligabandot31808.com/rtp/" target="_blank">RTP SLOT</a>
-    <a href="https://direct.lc.chat/19244517" target="_blank">LIVE CHAT ADMIN</a>
-    <a href="https://wa.me/6285376666645" target="_blank">WHATSAPP ADMIN</a>
+    <div class="info">
+      Minimal Deposit <strong>Rp10.000</strong><br>
+      Withdraw mulai <strong>Rp50.000</strong>
+    </div>
+
+    <div class="menu">
+    <a class="login" href="https://ligabandot31808.com/?referralid=anshun168" target="_blank">
+      LOGIN / DAFTAR
+    </a>
+<a class="login" href="https://ligabandot31935.com/?referralid=anshun168" target="_blank">
+      LOGIN / DAFTAR 1
+    </a>
+<a class="login" href="https://ligabandot39101.com/?referralid=anshun168" target="_blank">
+      LOGIN / DAFTAR 2
+    </a>
+<a class="login" href="https://ligabandot81045.com/?referralid=anshun168" target="_blank">
+      LOGIN / DAFTAR 3
+    </a>
+      <a href="https://ligabandot31808.com/blog/?title=PREDIKSI%20BOLA" target="_blank">PREDIKSI BOLA</a>
+      <a href="https://ligabandot31808.com/rtp/" target="_blank">RTP SLOT</a>
+      <a href="https://direct.lc.chat/19244517" target="_blank">LIVE CHAT ADMIN</a>
+      <a href="https://wa.me/6281266666347" target="_blank">WHATSAPP ADMIN</a>
+    </div>
+
+    <footer>
+      © 2026 ligabandit.com – All Rights Reserved
+    </footer>
   </div>
-
-  <script>
-document.getElementById("shareWA").addEventListener("click", function (e) {
-  e.preventDefault();
-  const text = encodeURIComponent(
-    "🔥 LIGABANDIT – Situs Resmi 🔥\n" +
-    "Min Depo 10rb & WD 50rb\n" +
-    "Main Bola, Slot & Live Games\n\n" +
-    "👉 https://ligabandit.com"
-  );
-  window.open("https://api.whatsapp.com/send?text=" + text, "_blank");
-});
-</script>
-
-  <footer>
-    © 2025 ligaBandit.com – All Rights Reserved
-  </footer>
-
 </body>
 </html>
