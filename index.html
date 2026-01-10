@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>LIGABANDIT - Situs Resmi</title>
-<meta name="description" content="LIGABANDIT situs resmi. Main bola, slot, live games terpercaya">
+<meta name="description" content="LIGABANDIT situs resmi. Main bola, slot, live games terpercaya hanya di #ligabandit ">
 <meta name="author" content="Ligabandit Official">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ligabandit.com/">
@@ -52,14 +52,13 @@ h1{
   font-size:30px;
   font-weight:600;
   color:#ffd36b;
-  letter-spacing:1px;
 }
 
 h2{
   font-size:14px;
   font-weight:300;
   opacity:.85;
-  margin-bottom:16px;
+  margin-bottom:10px;
 }
 
 .divider{
@@ -71,7 +70,7 @@ h2{
 
 .info{
   font-size:14px;
-  margin-bottom:22px;
+  margin-bottom:18px;
   color:#ffe6a6;
   line-height:1.6;
 }
@@ -82,9 +81,6 @@ h2{
   gap:12px;
 }
 
-/* =====================
-   DEFAULT BUTTON
-===================== */
 .menu a{
   padding:14px;
   border-radius:16px;
@@ -92,52 +88,30 @@ h2{
   color:#3a2f25;
   text-decoration:none;
   font-weight:600;
-  transition:all .35s ease;
+  transition:.35s;
 }
 
-/* =====================
-   PRIMARY CTA BUTTON
-===================== */
 .menu a.primary{
   position:relative;
   overflow:hidden;
   font-size:16px;
-  letter-spacing:.6px;
-  animation:glowPulse 3.6s infinite ease-in-out;
+  animation:glowPulse 3.5s infinite;
 }
 
 .menu a.primary::before{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,.45),
-    transparent
-  );
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
   transform:translateX(-120%);
   animation:shimmer 4s infinite;
 }
 
-.menu a.primary:hover{
-  transform:translateY(-4px) scale(1.02);
-  box-shadow:
-    0 14px 30px rgba(0,0,0,.4),
-    0 0 26px rgba(255,211,107,.6);
-}
-
-/* =====================
-   SECONDARY BUTTON HOVER
-===================== */
-.menu a:not(.primary):hover{
-  transform:translateY(-2px);
+.menu a:hover{
+  transform:translateY(-3px);
   box-shadow:0 10px 22px rgba(0,0,0,.3);
 }
 
-/* =====================
-   ANIMATIONS
-===================== */
 @keyframes shimmer{
   0%{transform:translateX(-120%)}
   50%{transform:translateX(120%)}
@@ -145,12 +119,8 @@ h2{
 }
 
 @keyframes glowPulse{
-  0%,100%{
-    box-shadow:0 0 0 rgba(255,211,107,0);
-  }
-  50%{
-    box-shadow:0 0 26px rgba(255,211,107,.5);
-  }
+  0%,100%{box-shadow:0 0 0 rgba(255,211,107,0)}
+  50%{box-shadow:0 0 26px rgba(255,211,107,.5)}
 }
 
 footer{
@@ -159,18 +129,94 @@ footer{
   color:#ffd36b;
   opacity:.85;
 }
+
+/* ===== MODAL ===== */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal-box{
+  background:rgba(0,0,0,.9);
+  padding:26px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 0 30px rgba(255,211,107,.45);
+}
+
+.modal-box h3{
+  color:#ffd36b;
+  margin-bottom:10px;
+}
+
+.modal-box p{
+  color:#ffe6a6;
+  margin-bottom:18px;
+}
+
+.modal-actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+
+.btn-ok{
+  padding:12px 22px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ffd36b,#e6b950);
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-ok:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.btn-cancel{
+  padding:12px 22px;
+  border-radius:14px;
+  background:rgba(255,255,255,.15);
+  color:#ffd36b;
+  border:none;
+  cursor:pointer;
+}
 </style>
 </head>
 
 <body>
-<div class="card">
 
-<img src="goat-logo.png" alt="LIGABANDIT Logo" class="logo">
+<!-- MODAL -->
+<div id="confirmModal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>⚠️ PERHATIAN</h3>
+    <p>
+      PILIH <strong>DAFTAR</strong><br>
+      Dan pastikan REFERRAL<br>
+      <strong>ANSHUN168</strong>
+    </p>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeConfirm()">BATAL</button>
+      <button id="btnNext" class="btn-ok" disabled>LANJUT (3)</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+<img src="goat-logo.png" class="logo" alt="LIGABANDIT">
 
 <h1>LIGABANDIT</h1>
 <h2>Situs Resmi Ligabandit dengan Referral</h2>
+
 <div class="info">
-"Berani Masuk, Cerdik Bermain, Menang Sebagai Legenda"</strong>
+“Berani Masuk, Cerdik Bermain, Menang Sebagai Legenda”
+</div>
 
 <div class="divider"></div>
 
@@ -180,13 +226,14 @@ Withdraw mulai <strong>Rp50.000</strong>
 </div>
 
 <div class="menu">
-<a class="primary" href="https://ligabandot31808.com/?referralid=anshun168" target="_blank">
-  LOGIN / DAFTAR
+<a class="primary" href="#" onclick="openConfirm('https://ligabandot31808.com/?referralid=anshun168')">
+LOGIN / DAFTAR
 </a>
 
 <a href="https://ligabandot31935.com/?referralid=anshun168" target="_blank">LOGIN / DAFTAR 1</a>
 <a href="https://ligabandot39101.com/?referralid=anshun168" target="_blank">LOGIN / DAFTAR 2</a>
 <a href="https://ligabandot81045.com/?referralid=anshun168" target="_blank">LOGIN / DAFTAR 3</a>
+</div>
 
 <a href="https://ligabandot31808.com/blog/?title=PREDIKSI%20BOLA" target="_blank">PREDIKSI BOLA</a>
 <a href="https://ligabandot31808.com/rtp/" target="_blank">RTP SLOT</a>
@@ -194,10 +241,44 @@ Withdraw mulai <strong>Rp50.000</strong>
 <a href="https://ligabandit.com" target="_blank">WA 0812.66666.347</a>
 </div>
 
-<footer>
-© 2026 ligabandit.com – All Rights Reserved
-</footer>
-
+<footer>© 2026 ligabandit.com</footer>
 </div>
+
+<script>
+let nextUrl='';
+let timeLeft=3;
+let timer;
+
+function openConfirm(url){
+  nextUrl=url;
+  timeLeft=3;
+  const btn=document.getElementById('btnNext');
+  btn.disabled=true;
+  btn.textContent=`LANJUT (${timeLeft})`;
+  document.getElementById('confirmModal').style.display='flex';
+
+  timer=setInterval(()=>{
+    timeLeft--;
+    btn.textContent=`LANJUT (${timeLeft})`;
+    if(timeLeft<=0){
+      clearInterval(timer);
+      btn.disabled=false;
+      btn.textContent='LANJUT DAFTAR';
+      btn.onclick=goNext;
+    }
+  },1000);
+}
+
+function closeConfirm(){
+  clearInterval(timer);
+  document.getElementById('confirmModal').style.display='none';
+}
+
+function goNext(){
+  window.open(nextUrl,'_blank');
+  closeConfirm();
+}
+</script>
+
 </body>
 </html>
